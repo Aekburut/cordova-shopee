@@ -50,17 +50,17 @@
       padding-left: 5px;
       padding-bottom: 5px;
       padding-right: 5px;
-      color: rgb(172, 0, 0);
+      color: rgb(133, 0, 0);
     }
   </style>
 </head>
 
 <body style="background-color:#99FF33">
-    <ons-navigator swipeable id="myNavigator">
+  <ons-navigator swipeable id="myNavigator">
     <ons-page>
       <ons-toolbar style="background-color:#FFCC00">
         <div class="left">
-          <ons-icon class="toolbaricon" size="30px" icon="fa-shopping-bag">
+          <ons-icon class="toolbaricon" size="30px" icon="fa-shopping-bag" onclick="window.location.href='scan.html'">
           </ons-icon>
         </div>
         <div class="center" id="appname">#</div>
@@ -69,7 +69,7 @@
           </ons-icon>
         </div>
       </ons-toolbar>
-  
+
       <ons-tabbar swipeable position="auto" id="tabbar">
         <ons-tab page="tab1.html" label="Home" icon="ion-home, material:md-home" active style="background-color:#FFCC00">
         </ons-tab>
@@ -80,23 +80,23 @@
       </ons-tabbar>
     </ons-page>
   </ons-navigator>
-    <template id="tab1.html">
-      <ons-page id="Tab1">
-        <p style="text-align: center; margin-top: 10px;">
-          <ons-search-input placeholder="search" onchange="search(this.value)"></ons-search-input>
-        </p>
-        <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
-          <ons-carousel-item id="carousel1" style="background: url('images/1.jpg') no-repeat center; background-size: contain;">
-          </ons-carousel-item>
-          <ons-carousel-item id="carousel2" style="background: url('images/2.jpg') no-repeat center; background-size: contain;">
-          </ons-carousel-item>
-          <ons-carousel-item id="carousel3" style="background: url('images/3.jpg') no-repeat center; background-size: contain;">
-          </ons-carousel-item>
-        </ons-carousel>
-  
-        <div id="icons"></div>
-  
-        <script id="icon_template" type="text/template">
+  <template id="tab1.html">
+    <ons-page id="Tab1">
+      <p style="text-align: center; margin-top: 10px;">
+        <ons-search-input placeholder="search" onchange="search(this.value)"></ons-search-input>
+      </p>
+      <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;">
+        <ons-carousel-item id="carousel1" style="background: url('images/1.jpg') no-repeat center; background-size: contain;">
+        </ons-carousel-item>
+        <ons-carousel-item id="carousel2" style="background: url('images/2.jpg') no-repeat center; background-size: contain;">
+        </ons-carousel-item>
+        <ons-carousel-item id="carousel3" style="background: url('images/3.jpg') no-repeat center; background-size: contain;">
+        </ons-carousel-item>
+      </ons-carousel>
+
+      <div id="icons"></div>
+
+      <script id="icon_template" type="text/template">
           <ons-row style="height:120px" vertical-align="center">  
           <% categories.forEach(function(category){%>  
           <ons-col style="background:<%= category.color %>;" width="33%" onclick="changeTab('<%= category.name %>')">
@@ -110,17 +110,17 @@
           <%});%>
           </ons-row>
           </script>
-  
-  
-      </ons-page>
-    </template>
-    <template id="tab2.html">
-      <ons-page id="Tab2">
-        <h1 style="text-align: center;">Shopping Cart</h1>
-        
-  <div id="showDataCart"></div>
-  
-       <script id="cart_template" type="text/template">
+
+
+    </ons-page>
+  </template>
+  <template id="tab2.html">
+    <ons-page id="Tab2">
+      <h1 style="text-align: center;">Shopping Cart</h1>
+
+      <div id="showDataCart"></div>
+
+      <script id="cart_template" type="text/template">
         <ons-list>
           
         <% cartData.forEach(function(cartData){
@@ -143,22 +143,22 @@
         </ons-list>
         <%})%>
       </script>
-        <p style="text-align: center; margin: 10px;">
-          <ons-button modifier="large" style="background-color:#FF9900">PROCEED TO PAY</ons-button>
-        </p>
-      </ons-page>
-    </template>
-  
-    <template id="tab3.html">
-        <ons-page id="Tab3">
-          <p style="text-align: center; margin-top: 10px;">
-            <ons-search-input placeholder="Search" onchange="search(this.value)"></ons-search-input>
-          </p>
-          <hr>
-          
-          <h1 align="center">Popular Products</h1>
-          <div id="allPro"></div>
-          <script id="allPro_template" type="text/template"> 
+      <p style="text-align: center; margin: 10px;">
+        <ons-button modifier="large" style="background-color:#FF9900">PROCEED TO PAY</ons-button>
+      </p>
+    </ons-page>
+  </template>
+
+  <template id="tab3.html">
+    <ons-page id="Tab3">
+      <p style="text-align: center; margin-top: 10px;">
+        <ons-search-input placeholder="Search" onchange="search(this.value)"></ons-search-input>
+      </p>
+      <hr>
+
+      <h1 align="center">Popular Products</h1>
+      <div id="allPro"></div>
+      <script id="allPro_template" type="text/template">
             <ons-row>
            
           <% allPro.forEach(function(allPro){
@@ -179,29 +179,31 @@
             <%});%>
           </ons-row>
           </script>
-    
-          
-          <!-- <ons-button modifier="large" onclick="addnewdata()" >
+
+
+      <!-- <ons-button modifier="large" onclick="addnewdata()" >
             ADD DATA
           </ons-button> -->
-    
-        </ons-page>
-      </template>
-      <script>
-          var datadep = localStorage.getItem('getDep');
-          console.log(datadep)
-          </script>
-      <template id="detailP.html">
-        <ons-page>
-        
-            <ons-toolbar>
-                <div class="left"><ons-back-button>Back</ons-back-button></div>
-                <div class="center">Detail</div>
-            </ons-toolbar>
-    
-           <div id="showDep"></div>
-          
-           <script id="Detailproduct_template" type="text/template">
+
+    </ons-page>
+  </template>
+  <script>
+    var datadep = localStorage.getItem('getDep');
+    console.log(datadep)
+  </script>
+  <template id="detailP.html">
+    <ons-page>
+
+      <ons-toolbar>
+        <div class="left">
+          <ons-back-button>Back</ons-back-button>
+        </div>
+        <div class="center">Detail</div>
+      </ons-toolbar>
+
+      <div id="showDep"></div>
+
+      <script id="Detailproduct_template" type="text/template">
               <ons-card>
                  
                   <ons-carousel swipeable auto-scroll overscrollable id="carousel" style="height: 300px;" style="background:#66FF00;">
@@ -233,58 +235,62 @@
                   <%})%>
                 </ons-card>
            </script>
-        </ons-page>
-      </template>
-  </body>
-  
-  <script>
-    getHomeData();
-    tatol();
-    document.addEventListener('prechange', function (event) {
-      if (event.index == 0) {
-        console.log('Home clicked');
-        // get data for home screen  
-        getHomeData();
-      } else if (event.index == 2) {
+    </ons-page>
+  </template>
+</body>
+
+<script>
+  getHomeData();
+  tatol();
+  document.addEventListener('prechange', function (event) {
+    if (event.index == 0) {
+      console.log('Home clicked');
+      // get data for home screen  
+      getHomeData();
+    } else if (event.index == 2) {
       console.log('Cart clicked');
       getData2cart()
-    
-      } if (event.index == 2) {
-         
-        console.log('All products clicked');
-        var name2 = localStorage.getItem('name');
-        var item = localStorage.getItem('items');
-        console.log('products clicked');
-        // get data for all product screen 
-        console.log('Cart clicked');
-      // get data for cart screen  
-      
-        if(name2==null && item == null){
-          console.log(name2)
-          getAllProduct();}
-          else if(name2!=null && item == null) {
-  
-            getAllProduct(name2);
-          }else{
 
-          }
-          localStorage.clear();
-  
+    } if (event.index == 2) {
+
+      console.log('All products clicked');
+      var name2 = localStorage.getItem('name');
+      var item = localStorage.getItem('items');
+      console.log('products clicked');
+      // get data for all product screen 
+      console.log('Cart clicked');
+      // get data for cart screen  
+
+      if (name2 == null && item == null) {
+        console.log(name2)
+        getAllProduct();
       }
-    });
-  
-    function changeTab(name){
-      localStorage.setItem('name' , name);
-      document.getElementById('tabbar').setActiveTab(2);
-  
+      else if (name2 != null && item == null) {
+
+        getAllProduct(name2);
+      } else {
+
+      }
+      localStorage.clear();
+
     }
-  
-    function getHomeData() {
-  
+  });
+
+  function changeTab(name) {
+    localStorage.setItem('name', name);
+    document.getElementById('tabbar').setActiveTab(2);
+
+  }
+
+  function getHomeData() {
+    var code = localStorage.getItem("code");
+    if (code == null) {
+
+
       var docRef = db.collection("UI").doc("home");
       docRef.get().then(function (doc) {
         if (doc.exists) {
-  
+
           //display data
           console.log("Document data:", doc.data());
           var data = doc.data();
@@ -294,149 +300,163 @@
           var icon_template = $('#icon_template').html();
           var html = ejs.render(icon_template, { categories: data.categories });
           $('#icons').html(html);
-  
+
         } else {
-  
+
           console.log("No such document!");
         }
       }).catch(function (error) {
         console.log("Error getting document:", error);
       });
-  
-      //$.getJSON('home.json', function (data) {
-      //  console.log(data);
-      // $('#appname').html(data.appname);
-      // var style = "background: url('images/" + data.slides[0] + "') no-repeat center; background-size: contain;'";
-      // $('#carousel1').attr('style', style)
-      // var icon_template = $('#icon_template').html();
-      // var html = ejs.render(icon_template, { categories: data.categories });
-      //  $('#icons').html(html);
-      // });
     }
-    // function getCartData() {
-    //   var docRef = db.collection("UI").doc("cart");
-    //   docRef.get().then(function (doc) {
-    //     if (doc.exists) {
+    else {
+      showDetailP();
+      myNavigator.pushPage('detailP.html');
+
+    }
+    }
+    //$.getJSON('home.json', function (data) {
+    //  console.log(data);
+    // $('#appname').html(data.appname);
+    // var style = "background: url('images/" + data.slides[0] + "') no-repeat center; background-size: contain;'";
+    // $('#carousel1').attr('style', style)
+    // var icon_template = $('#icon_template').html();
+    // var html = ejs.render(icon_template, { categories: data.categories });
+    //  $('#icons').html(html);
+    // });
   
-    //       //display data
-    //       console.log("Document data:", doc.data());
-    //       var data = doc.data();
-    //       var img_template = $('#img_template').html();
-    //       var html = ejs.render(img_template, { cart: data.cart });
-    //       $('#img').html(html);
-  
-  
-    //     } else {
-  
-    //       console.log("No such document!");
-    //     }
-    //   }).catch(function (error) {
-    //     console.log("Error getting document:", error);
-    //   });
-    // }
-  
-  
-  
-    // function getCategoriesData() {
-    //   var docRef = db.collection("UI").doc("categories");
-    //   docRef.get().then(function (doc) {
-    //     if (doc.exists) {
-  
-    //       //display data
-    //       console.log("Document data:", doc.data());
-    //       var data = doc.data();
-    //       var prod_template = $('#prod_template').html();
-    //       var html = ejs.render(prod_template, { Products: data.Products });
-    //       $('#prod').html(html);
-  
-  
-    //     } else {
-  
-    //       console.log("No such document!");
-    //     }
-    //   }).catch(function (error) {
-    //     console.log("Error getting document:", error);
-    //   });
-    // }
-    function showDetailP() {
-    var dataproduct = localStorage.getItem('getDep');
+  // function getCartData() {
+  //   var docRef = db.collection("UI").doc("cart");
+  //   docRef.get().then(function (doc) {
+  //     if (doc.exists) {
+
+  //       //display data
+  //       console.log("Document data:", doc.data());
+  //       var data = doc.data();
+  //       var img_template = $('#img_template').html();
+  //       var html = ejs.render(img_template, { cart: data.cart });
+  //       $('#img').html(html);
+
+
+  //     } else {
+
+  //       console.log("No such document!");
+  //     }
+  //   }).catch(function (error) {
+  //     console.log("Error getting document:", error);
+  //   });
+  // }
+
+
+
+  // function getCategoriesData() {
+  //   var docRef = db.collection("UI").doc("categories");
+  //   docRef.get().then(function (doc) {
+  //     if (doc.exists) {
+
+  //       //display data
+  //       console.log("Document data:", doc.data());
+  //       var data = doc.data();
+  //       var prod_template = $('#prod_template').html();
+  //       var html = ejs.render(prod_template, { Products: data.Products });
+  //       $('#prod').html(html);
+
+
+  //     } else {
+
+  //       console.log("No such document!");
+  //     }
+  //   }).catch(function (error) {
+  //     console.log("Error getting document:", error);
+  //   });
+  // }
+  function showDetailP() {
+    var code = localStorage.getItem("code");
+    if (code == null) {
+      var dataproduct = localStorage.getItem('getDep');
+    } else if (code != null) {
+      var dataproduct = localStorage.getItem("code");
+    }
+    
     var apr = db.collection("product").where("title", "==", dataproduct);
     apr.get().then(function (querySnapshot) {
       var Detailproduct_template = $('#Detailproduct_template').html();
       var html = ejs.render(Detailproduct_template, { dataDep: querySnapshot.docs });
-      $('#showDep').html(html); 
+      $('#showDep').html(html);
     })
-  
+  localStorage.clear("code")
   }
-  
-  
-    function getAllProduct(name2,item) {
-      if(name2==null){
-        var apr = db.collection("product")
-        apr.get().then(function (querySnapshot) { 
-   
+
+
+  function getAllProduct(name2, item) {
+    if (name2 == null) {
+      var apr = db.collection("product")
+      apr.get().then(function (querySnapshot) {
+
         var allPro_template = $('#allPro_template').html();
         console.log(querySnapshot);
-        var html = ejs.render(allPro_template, { allPro : querySnapshot.docs });
+        var html = ejs.render(allPro_template, { allPro: querySnapshot.docs });
         $('#allPro').html(html);
       })
     }
-  
-     else{var apr = db.collection("product").where("category","==",name2);
+
+    else {
+      var apr = db.collection("product").where("category", "==", name2);
       apr.get().then(function (querySnapshot) {
-        
-        var allPro_template = $('#allPro_template').html(); 
+
+        var allPro_template = $('#allPro_template').html();
         console.log(querySnapshot);
-        var html = ejs.render(allPro_template, { allPro : querySnapshot.docs });
+        var html = ejs.render(allPro_template, { allPro: querySnapshot.docs });
         $('#allPro').html(html);
-      })}
+      })
+    }
   }
-  
-  
-  
-    function addNewData() {
-  
-      var data = {
-        pid: 5,
-        title: 'iPhone XS ',
-        price: 57000,
-        category: 'smartphone'
-      }
-  
-      db.collection("product").add(data)
+
+
+
+  function addNewData() {
+
+    var data = {
+      pid: 5,
+      title: 'iPhone XS ',
+      price: 57000,
+      category: 'smartphone'
+    }
+
+    db.collection("product").add(data)
       .then(function (docRef) {
         console.log("Document written with ID: ", docRef.id);
       })
-        .catch(function (error) {
-          console.error("Error adding document: ", error);
-        });
-  
-    }
-    function getDetail(getDep){
-localStorage.setItem("getDep",getDep)
-showDetailP();
-myNavigator.pushPage('detailP.html');
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
 
-}
-
-// search //
-function search(search) {
-   
-   const filterItems = (needle, heystack) => {
-    let query = needle.toLowerCase();
-    return heystack.filter(item => item.data().title.toLowerCase().indexOf(needle) >= 0);
   }
-  console.log("มาแล้วครับ", filterItems(search, data));
-  var item=filterItems(search, data);
-  console.log("มาแล้วน่ะ",item)
-  localStorage.setItem('items', item);
-  
+  function getDetail(getDep) {
+    localStorage.setItem("getDep", getDep)
+    showDetailP();
+    myNavigator.pushPage('detailP.html');
 
-  console.log('search',item);
-  
-test(item);
+  }
 
-document.getElementById('tabbar').setActiveTab(2);
+  // search //
+  function search(search) {
+
+    const filterItems = (needle, heystack) => {
+      let query = needle.toLowerCase();
+      return heystack.filter(item => item.data().title.toLowerCase().indexOf(needle) >= 0);
+    }
+    console.log("มาแล้วครับ", filterItems(search, data));
+    var item = filterItems(search, data);
+    console.log("มาแล้วน่ะ", item)
+    localStorage.setItem('items', item);
+
+
+    console.log('search', item);
+
+    test(item);
+
+    document.getElementById('tabbar').setActiveTab(2);
     // localStorage.setItem('title', item);
   }
 
@@ -451,52 +471,52 @@ document.getElementById('tabbar').setActiveTab(2);
           data.push(item)
           console.log(data)
         });
-        
+
       })
     // const fruits = data[1];
   }
 
 
-function test(title){
-console.log("title",title);
+  function test(title) {
+    console.log("title", title);
 
-    console.log('tset',title);
-        var allPro_template = $('#allPro_template').html();
-         var html = ejs.render(allPro_template, { allPro: title });
-        $('#allPro').html(html);
-  
- }
- 
- var dataCart = [];
-function addtocart(add2cart){
-  localStorage.clear('quentinTarantino');
-localStorage.setItem('quentinTarantino',add2cart);
-var retrievedData = localStorage.getItem("quentinTarantino");
-console.log(retrievedData);
-dataCart.push(retrievedData);
-alert(dataCart);
-getData2cart();
-}
+    console.log('tset', title);
+    var allPro_template = $('#allPro_template').html();
+    var html = ejs.render(allPro_template, { allPro: title });
+    $('#allPro').html(html);
+
+  }
+
+  var dataCart = [];
+  function addtocart(add2cart) {
+    localStorage.clear('quentinTarantino');
+    localStorage.setItem('quentinTarantino', add2cart);
+    var retrievedData = localStorage.getItem("quentinTarantino");
+    console.log(retrievedData);
+    dataCart.push(retrievedData);
+    alert(dataCart);
+    getData2cart();
+  }
 
 
 
-function getData2cart(){
-  console.log('functioncart');
-  console.log(dataCart);
-  document.getElementById('showDataCart').innerHTML = '';
-  dataCart.forEach(function(dataCart){
-    var apr = db.collection("product").where("title", "==",dataCart);
-    apr.get().then(function (querySnapshot) {
-      console.log(querySnapshot.docs)
-      var cart_template = $('#cart_template').html();
-      var html = ejs.render(cart_template, { cartData: querySnapshot.docs });
-      
-      $('#showDataCart').append(html); 
-    
+  function getData2cart() {
+    console.log('functioncart');
+    console.log(dataCart);
+    document.getElementById('showDataCart').innerHTML = '';
+    dataCart.forEach(function (dataCart) {
+      var apr = db.collection("product").where("title", "==", dataCart);
+      apr.get().then(function (querySnapshot) {
+        console.log(querySnapshot.docs)
+        var cart_template = $('#cart_template').html();
+        var html = ejs.render(cart_template, { cartData: querySnapshot.docs });
+
+        $('#showDataCart').append(html);
+
+      })
+
     })
-    
-  })
-}
+  }
 
 
 
@@ -504,8 +524,6 @@ function getData2cart(){
 
 
 
-  </script>
-  
-  </html>
+</script>
 
-
+</html>
