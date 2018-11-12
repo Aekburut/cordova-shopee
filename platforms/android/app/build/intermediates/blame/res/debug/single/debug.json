@@ -4,12 +4,12 @@
         "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xhdpi\\abc_ic_clear_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
-        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\anim\\abc_slide_in_top.xml"
-    },
-    {
         "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xhdpi\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
+        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_shrink_fade_out_from_bottom.xml.flat",
@@ -60,28 +60,28 @@
         "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xxhdpi\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_ic_go_search_api_mtrl_alpha.png.flat",
-        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
+        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_zxing_barcode_scanner.xml.flat",
+        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.3.0.aar\\9b2ae4afb7895ccb077750c680ec8a7f\\res\\layout\\zxing_barcode_scanner.xml"
     },
     {
         "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
         "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_zxing_barcode_scanner.xml.flat",
-        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.3.0.aar\\9b2ae4afb7895ccb077750c680ec8a7f\\res\\layout\\zxing_barcode_scanner.xml"
+        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_abc_ic_go_search_api_mtrl_alpha.png.flat",
+        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xhdpi\\abc_ic_go_search_api_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
-        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-mdpi\\abc_btn_switch_to_on_mtrl_00001.9.png"
+        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xxxhdpi\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_abc_ic_menu_moreoverflow_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-mdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-xxxhdpi\\abc_spinner_mtrl_am_alpha.9.png"
+        "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_abc_btn_switch_to_on_mtrl_00001.9.png.flat",
+        "source": "C:\\Users\\Egbur\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-23.1.0.aar\\f6c3adf6c2829f1093df94d778f2c0f6\\res\\drawable-mdpi\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "D:\\977-341\\hellocordova\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_abc_ic_commit_search_api_mtrl_alpha.png.flat",
